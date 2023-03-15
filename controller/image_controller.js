@@ -2,6 +2,10 @@ import File from "../models/file.js";
 import dotenv from "dotenv";
 dotenv.config();
 
+export const sampleData = (req, res) => {
+  res.send("Server is Active...");
+};
+
 export const uploadImage = async (req, res) => {
   const fileObj = {
     path: req.file.path,
